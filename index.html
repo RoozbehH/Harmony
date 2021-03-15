@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="linkedArc.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin Slab" >
+
+
+    <style>
+      #mainDiv
+      {
+        position:absolute;
+        margin:0 auto;
+        width:80%;
+        height:100%;
+        top:0px;
+        left:10%;
+      }
+      form
+      {
+        position  :absolute;
+        top       :50px;
+        left      :00px;
+        width     :150px;
+        margin    :10px;
+      }
+      input
+      {
+        margin    :10px;
+        width     :150px;
+        font      :italic bold 12px 'arial';
+        color     :gray;
+      }
+      .tooltipTitle
+      {
+        font-family:'Arial';
+        font-size:13px;
+        font-weight:bold;
+      }
+      .tooltipVal
+      {
+        font-family:'Josefin Slab';
+        font-size:15px;
+        font-style:italic;
+      }
+      .selectionFrame
+      {
+          stroke          : gray;
+          stroke-width    : 1px;
+          stroke-dasharray: 4px;
+          stroke-opacity  : 1;
+          fill            : blue;
+          opacity         : 0.1;
+      }
+      .link
+      {
+        stroke      : blue;
+        stroke-width: 1.5;
+        opacity     : 0.5;
+        fill        : none;
+      }
+      .coloredLink
+      {
+        --stroke      : blue;
+        stroke-width: 1.5;
+        --opacity     :0.5;
+        fill        : none;
+      }
+      .linkOver
+      {
+        stroke      : red;
+        stroke-width: 2;
+        opacity     : 1;
+        fill        : none;
+      }
+      .linkNoOver
+      {
+        stroke      : blue;
+        stroke-width: 1;
+        opacity     : 0.3;
+        fill        : none;
+      }
+      .linkOnObj
+      {
+        stroke      : red;
+        stroke-width: 1;
+        opacity     : 1;
+        fill        : none;
+      }
+      .selectedLink
+      {
+        stroke      : green;
+        stroke-width: 1.5;
+        opacity     : 1;
+        fill        : none;
+      }
+      .unSelectedLink
+      {
+        stroke      : blue;
+        stroke-width: 1;
+        opacity     : 0.01;
+        fill        : none;
+      }
+
+
+    </style>
+    <title>Harmony between objectives</title>
+  </head>
+  <body>
+    <div id="mainDiv">
+      <form id="input" action="inputSubmit">
+        <fieldset>
+          <legend>Input the goal</legend>
+          <p style="text-align:justify">Please enter the goal of your space for each objective with their weight and seperate them by -</p>
+        </fieldset>
+      </form>
+    </div>
+
+    <script>
+      var doc; //Document Size
+      doc=document.getElementById('mainDiv');
+      var mainSVG=d3.select('#mainDiv').append('svg')
+                    .attr('id','mainSVG')
+                    .attr('width',doc.clientWidth)
+                    .attr('height',doc.clientHeight)
+                    .on( "mousedown", mouseDown)
+                    .on( "mouseup",mouseUp)
+                    .on('click',Reset);
+
+      var fileName='Mohammed/Mohamed7objective.csv';
+      readData();
+    </script>
+  </body>
+</html>
