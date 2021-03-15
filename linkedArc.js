@@ -15,7 +15,7 @@ function readData()
   {
     for(i=0;i<data.length;i++)
     {
-      Data[i]=[+data[i].Obj1,+data[i].Obj2,+data[i].Obj3,+data[i].Obj4,+data[i].Obj5,+data[i].Obj6,+data[i].Obj7];//,+data[i].Obj8,+data[i].Obj9,+data[i].Obj10,+data[i].Obj11,+data[i].Obj12,+data[i].Obj13,+data[i].Obj14,+data[i].Obj15,+data[i].Obj16,+data[i].Obj17,+data[i].Obj18,+data[i].Obj19,+data[i].Obj20];//,+data[i].Obj21,+data[i].Obj22,+data[i].Obj23,+data[i].Obj24,+data[i].Obj25,+data[i].Obj26,+data[i].Obj27,+data[i].Obj28,+data[i].Obj29,+data[i].Obj30,+data[i].Obj31,+data[i].Obj32,+data[i].Obj33,+data[i].Obj34,+data[i].Obj35,+data[i].Obj36,+data[i].Obj37,+data[i].Obj38,+data[i].Obj39,+data[i].Obj40,+data[i].Obj41,+data[i].Obj42,+data[i].Obj43,+data[i].Obj44,+data[i].Obj45,+data[i].Obj46,+data[i].Obj47,+data[i].Obj48,+data[i].Obj49,+data[i].Obj50];
+      Data[i]=[+data[i].Obj1,+data[i].Obj2,+data[i].Obj3,+data[i].Obj4,+data[i].Obj5]//,+data[i].Obj6,//+data[i].Obj7];//,+data[i].Obj8,+data[i].Obj9,+data[i].Obj10,+data[i].Obj11,+data[i].Obj12,+data[i].Obj13,+data[i].Obj14,+data[i].Obj15,+data[i].Obj16,+data[i].Obj17,+data[i].Obj18,+data[i].Obj19,+data[i].Obj20];//,+data[i].Obj21,+data[i].Obj22,+data[i].Obj23,+data[i].Obj24,+data[i].Obj25,+data[i].Obj26,+data[i].Obj27,+data[i].Obj28,+data[i].Obj29,+data[i].Obj30,+data[i].Obj31,+data[i].Obj32,+data[i].Obj33,+data[i].Obj34,+data[i].Obj35,+data[i].Obj36,+data[i].Obj37,+data[i].Obj38,+data[i].Obj39,+data[i].Obj40,+data[i].Obj41,+data[i].Obj42,+data[i].Obj43,+data[i].Obj44,+data[i].Obj45,+data[i].Obj46,+data[i].Obj47,+data[i].Obj48,+data[i].Obj49,+data[i].Obj50];
       /*for(j=1;j<Object.keys(data[i]).length;j++)
       {
         objNo="Obj"+i.toString();
